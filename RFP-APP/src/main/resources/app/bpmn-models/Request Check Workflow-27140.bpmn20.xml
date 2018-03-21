@@ -1,0 +1,855 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef" xmlns:modeler="http://activiti.com/modeler" modeler:version="1.0en" modeler:exportDateTime="20180320234736544" modeler:modelId="27140" modeler:modelVersion="6" modeler:modelLastUpdated="1512566133409">
+  <collaboration id="Collaboration">
+    <participant id="sid-91D004B7-9D99-405F-9119-891FC0AA25A9" name="Finance Request For Check" processRef="Process_sid-91D004B7-9D99-405F-9119-891FC0AA25A9"/>
+  </collaboration>
+  <process id="Process_sid-91D004B7-9D99-405F-9119-891FC0AA25A9" name="Finance Request For Check" isExecutable="true">
+    <laneSet id="laneSet_Process_sid-91D004B7-9D99-405F-9119-891FC0AA25A9">
+      <lane id="sid-FC966345-F5A8-4A6C-A459-806B1F8A8400" name="FMS Web Service">
+        <extensionElements>
+          <modeler:editor-resource-id xmlns:modeler="http://activiti.com/modeler"><![CDATA[sid-FC966345-F5A8-4A6C-A459-806B1F8A8400]]></modeler:editor-resource-id>
+        </extensionElements>
+      </lane>
+      <lane id="sid-BDE44680-C48E-40AD-B7EA-E1F0F749998E" name="Account, Payable Review, Processing">
+        <extensionElements>
+          <modeler:editor-resource-id xmlns:modeler="http://activiti.com/modeler"><![CDATA[sid-BDE44680-C48E-40AD-B7EA-E1F0F749998E]]></modeler:editor-resource-id>
+        </extensionElements>
+        <flowNodeRef>sid-53D5464C-796C-46DC-8349-5213D256878D</flowNodeRef>
+        <flowNodeRef>sid-3C3FE247-CCC6-4643-BEA1-FFEDB9FDD9B2</flowNodeRef>
+        <flowNodeRef>sid-4F365CF7-9763-47DB-B6D5-01615127E480</flowNodeRef>
+        <flowNodeRef>sid-F0CC5D42-B35B-4EBF-BEF3-CD65E4263739</flowNodeRef>
+        <flowNodeRef>sid-90FC8CD6-4A6D-4B71-9B75-D7F31D6E7816</flowNodeRef>
+        <flowNodeRef>sid-B85D707E-64E0-4E65-9A75-95AA4E6FAF12</flowNodeRef>
+        <flowNodeRef>sid-B8003DED-F324-41F0-84FA-252117117472</flowNodeRef>
+        <flowNodeRef>sid-3BF12DB5-6A9E-46F9-B58E-A141F981EA7D</flowNodeRef>
+        <flowNodeRef>sid-DCF6853D-5F8B-4641-8254-284812875962</flowNodeRef>
+        <flowNodeRef>sid-D611816A-76C0-4E5E-A20E-F6C0B9886186</flowNodeRef>
+      </lane>
+      <lane id="sid-28887CD4-27DC-403C-953E-6E83362EDB53" name="Department Request">
+        <extensionElements>
+          <modeler:editor-resource-id xmlns:modeler="http://activiti.com/modeler"><![CDATA[sid-28887CD4-27DC-403C-953E-6E83362EDB53]]></modeler:editor-resource-id>
+        </extensionElements>
+        <flowNodeRef>sid-CECD972A-A12C-44A4-98A5-755F9DF274CC</flowNodeRef>
+        <flowNodeRef>sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F</flowNodeRef>
+        <flowNodeRef>sid-F991A971-966A-4E38-A286-FE92B22C33EB</flowNodeRef>
+        <flowNodeRef>sid-9250F697-A01B-43A4-A5E6-F0AEDC6E82B2</flowNodeRef>
+      </lane>
+      <lane id="sid-08EE043A-AA16-4720-AD91-890E4DA92998" name="Department Approvals">
+        <extensionElements>
+          <modeler:editor-resource-id xmlns:modeler="http://activiti.com/modeler"><![CDATA[sid-08EE043A-AA16-4720-AD91-890E4DA92998]]></modeler:editor-resource-id>
+        </extensionElements>
+        <flowNodeRef>sid-65387D01-0F63-4243-A628-7BAC108A8175</flowNodeRef>
+        <flowNodeRef>sid-61F0B3CD-A6D1-4367-B156-B274262BE595</flowNodeRef>
+        <flowNodeRef>sid-071E8AC2-563E-40BD-9A77-C87D54AC6417</flowNodeRef>
+        <flowNodeRef>sid-90AEB2B9-5289-459D-A6C7-BCDC8AE38FBC</flowNodeRef>
+        <flowNodeRef>sid-0208DAA5-7520-48DE-A73B-50A19143C8B3</flowNodeRef>
+        <flowNodeRef>sid-9BE1AF66-7767-42F1-B100-2392E8BF215B</flowNodeRef>
+        <flowNodeRef>sid-359AB35C-05DE-4245-AB26-A3A575D1A8F1</flowNodeRef>
+        <flowNodeRef>sid-112298C8-FD61-409D-990C-255B98F1731C</flowNodeRef>
+        <flowNodeRef>sid-C9254848-1102-4A44-BA4D-FB66F0C473BE</flowNodeRef>
+        <flowNodeRef>sid-CE5222FF-68DB-4351-9BA3-F86DAC677128</flowNodeRef>
+        <flowNodeRef>sid-4A33AB74-AAAE-4FB3-90DB-AA56C0BB7A51</flowNodeRef>
+        <flowNodeRef>sid-87F1C188-01B4-4CBB-B83F-EE31A3960D38</flowNodeRef>
+        <flowNodeRef>sid-3F52BF49-E720-40BF-9370-B45B6CDDF1B9</flowNodeRef>
+        <flowNodeRef>sid-5C9DB9AD-4949-472C-9EBF-B603B3A6A591</flowNodeRef>
+        <flowNodeRef>sid-3B14BF08-D7DA-4E5E-B134-08B613B18250</flowNodeRef>
+        <flowNodeRef>sid-03430B40-1F6C-4C89-95A0-415C6F0B00BD</flowNodeRef>
+      </lane>
+      <lane id="sid-8F937237-9A88-480B-BC18-3529916803DD" name="City Manager Approvals">
+        <extensionElements>
+          <modeler:editor-resource-id xmlns:modeler="http://activiti.com/modeler"><![CDATA[sid-8F937237-9A88-480B-BC18-3529916803DD]]></modeler:editor-resource-id>
+        </extensionElements>
+        <flowNodeRef>sid-7B4AA96C-0141-445E-A874-85B09F926415</flowNodeRef>
+        <flowNodeRef>sid-ACE4D7AB-3B5D-43F9-8539-956A80913C59</flowNodeRef>
+        <flowNodeRef>sid-4CD2717C-6C36-4DBF-A097-85E8DFEECB18</flowNodeRef>
+        <flowNodeRef>sid-7A76A845-4300-41D3-9227-25FB8111404C</flowNodeRef>
+        <flowNodeRef>sid-22F71366-5B4E-4488-BB1C-CFE4A2433968</flowNodeRef>
+        <flowNodeRef>sid-1251B3E2-99CC-47B6-89A2-438274B053AC</flowNodeRef>
+        <flowNodeRef>sid-DC18FB87-39DE-459E-8CA2-AC4877150FC7</flowNodeRef>
+        <flowNodeRef>sid-DD7575EF-CA78-47D1-A351-311BB3661031</flowNodeRef>
+        <flowNodeRef>sid-96D57F3A-57E3-4B97-A2D8-30F3895E52B1</flowNodeRef>
+        <flowNodeRef>sid-590EC0DE-68FF-41C9-BB30-A65DDF7AFB27</flowNodeRef>
+        <flowNodeRef>sid-766A5AFF-9A34-4817-9F5E-9D058FC6DBAF</flowNodeRef>
+        <flowNodeRef>sid-25F23E7E-A7EF-43F2-8B09-D9B11601C930</flowNodeRef>
+        <flowNodeRef>sid-793A84F1-86E4-43E8-9A6E-19CB6A168236</flowNodeRef>
+      </lane>
+      <lane id="sid-9BC19948-0960-4A4A-BFEE-0F779F5C8BE0" name="Fianance Approvals">
+        <extensionElements>
+          <modeler:editor-resource-id xmlns:modeler="http://activiti.com/modeler"><![CDATA[sid-9BC19948-0960-4A4A-BFEE-0F779F5C8BE0]]></modeler:editor-resource-id>
+        </extensionElements>
+        <flowNodeRef>sid-CB88677A-7E4F-47AF-AF26-B38856A39E23</flowNodeRef>
+        <flowNodeRef>sid-230294F2-809F-4198-82AB-DC1EB5E1C265</flowNodeRef>
+        <flowNodeRef>sid-F34E7EB1-184A-4973-9986-16E64C16A3EF</flowNodeRef>
+        <flowNodeRef>sid-4C8088CB-CDC1-41E6-B882-F7B1CA6BF02A</flowNodeRef>
+        <flowNodeRef>sid-EC095F3C-F49C-41AA-A8CF-FFEBF5F112D2</flowNodeRef>
+        <flowNodeRef>sid-CE6C0DB3-D8BB-40B2-B383-317ED062DEBB</flowNodeRef>
+        <flowNodeRef>sid-C7D2F3A2-4405-4644-B89F-DBBB4A62A4F1</flowNodeRef>
+        <flowNodeRef>sid-77262F1E-6895-49B4-A0C7-A52B57C5AAE5</flowNodeRef>
+        <flowNodeRef>sid-0DF5FA79-2F5A-4CAA-8D67-CCA9BA94FC9C</flowNodeRef>
+        <flowNodeRef>sid-8153C159-15B9-4793-A3D4-E9C2830D128C</flowNodeRef>
+        <flowNodeRef>sid-67F96A08-7AAC-45CC-8655-4D4D621BDB16</flowNodeRef>
+        <flowNodeRef>sid-BC56B08A-B715-4F53-81BB-1A9102686EB1</flowNodeRef>
+        <flowNodeRef>sid-880C24EB-13CC-4D00-AE46-D504A6B2B28D</flowNodeRef>
+      </lane>
+      <lane id="sid-09E1131B-B36A-4D21-91B8-6A3DFB9D6B79" name="Purchasing Approval">
+        <extensionElements>
+          <modeler:editor-resource-id xmlns:modeler="http://activiti.com/modeler"><![CDATA[sid-09E1131B-B36A-4D21-91B8-6A3DFB9D6B79]]></modeler:editor-resource-id>
+        </extensionElements>
+        <flowNodeRef>sid-C0136ED9-527B-4750-9844-BB6470FD3037</flowNodeRef>
+        <flowNodeRef>sid-7515FC8D-4282-4556-81B0-9DA3299999E4</flowNodeRef>
+        <flowNodeRef>sid-081CC251-7D30-41C9-ABBE-AD78E23CA656</flowNodeRef>
+        <flowNodeRef>sid-1431AC99-7F97-4B82-BBDE-E5909A161AD5</flowNodeRef>
+        <flowNodeRef>sid-66BAE750-7369-41E1-9FA4-40E82FFE9B40</flowNodeRef>
+        <flowNodeRef>sid-DCB5B9D7-9998-40BF-B84A-A293E0AD1E83</flowNodeRef>
+        <flowNodeRef>sid-6F21F9ED-5AB6-4A59-BC84-0C16F78D4C8F</flowNodeRef>
+        <flowNodeRef>sid-E7B2CD3E-ADD8-4299-938E-800079EEFC2F</flowNodeRef>
+        <flowNodeRef>sid-D1447026-EA8E-4812-8A1B-EAA09794D6CE</flowNodeRef>
+        <flowNodeRef>sid-14CD76FC-3F11-4957-AC9F-685093575EB5</flowNodeRef>
+        <flowNodeRef>sid-9944FC27-10F1-41E0-9AB4-A24343CCD28E</flowNodeRef>
+      </lane>
+    </laneSet>
+    <userTask id="sid-53D5464C-796C-46DC-8349-5213D256878D" name="Review ,Add Tax, Use Tax, 1099, create RC&#xa;(AP Clerk)" activiti:assignee="$INITIATOR" activiti:formKey="27124">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[27124]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[AP Clerk From]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-53D5464C-796C-46DC-8349-5213D256878D]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="sid-3C3FE247-CCC6-4643-BEA1-FFEDB9FDD9B2" name="FMS Data Accepted?">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-3C3FE247-CCC6-4643-BEA1-FFEDB9FDD9B2]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <userTask id="sid-4F365CF7-9763-47DB-B6D5-01615127E480" name="FMS Review,&#xa;AP Reviewer" activiti:assignee="$INITIATOR" activiti:formKey="27136">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[27136]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[FMS Review form]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-4F365CF7-9763-47DB-B6D5-01615127E480]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <endEvent id="sid-F0CC5D42-B35B-4EBF-BEF3-CD65E4263739" name="Imaging&#xa;(AP Clerk)">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-F0CC5D42-B35B-4EBF-BEF3-CD65E4263739]]></modeler:editor-resource-id>
+      </extensionElements>
+    </endEvent>
+    <userTask id="sid-90FC8CD6-4A6D-4B71-9B75-D7F31D6E7816" name="set up in FMS" activiti:assignee="$INITIATOR" activiti:formKey="27135">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[27135]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[setup FMS]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-90FC8CD6-4A6D-4B71-9B75-D7F31D6E7816]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-B85D707E-64E0-4E65-9A75-95AA4E6FAF12" sourceRef="sid-53D5464C-796C-46DC-8349-5213D256878D" targetRef="sid-3C3FE247-CCC6-4643-BEA1-FFEDB9FDD9B2">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-B85D707E-64E0-4E65-9A75-95AA4E6FAF12]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-B8003DED-F324-41F0-84FA-252117117472" name="Confirm" sourceRef="sid-4F365CF7-9763-47DB-B6D5-01615127E480" targetRef="sid-F0CC5D42-B35B-4EBF-BEF3-CD65E4263739">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-B8003DED-F324-41F0-84FA-252117117472]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-3BF12DB5-6A9E-46F9-B58E-A141F981EA7D" sourceRef="sid-90FC8CD6-4A6D-4B71-9B75-D7F31D6E7816" targetRef="sid-53D5464C-796C-46DC-8349-5213D256878D">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-3BF12DB5-6A9E-46F9-B58E-A141F981EA7D]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-DCF6853D-5F8B-4641-8254-284812875962" name="No: create not done" sourceRef="sid-3C3FE247-CCC6-4643-BEA1-FFEDB9FDD9B2" targetRef="sid-53D5464C-796C-46DC-8349-5213D256878D">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="rccreation" modeler:rightValue="notdone" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-DCF6853D-5F8B-4641-8254-284812875962]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'rccreation') && rccreation == 'notdone')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-D611816A-76C0-4E5E-A20E-F6C0B9886186" name="Yes : create Done" sourceRef="sid-3C3FE247-CCC6-4643-BEA1-FFEDB9FDD9B2" targetRef="sid-4F365CF7-9763-47DB-B6D5-01615127E480">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="rccreation" modeler:rightValue="done" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-D611816A-76C0-4E5E-A20E-F6C0B9886186]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'rccreation') && rccreation == 'done')}]]></conditionExpression>
+    </sequenceFlow>
+    <startEvent id="sid-CECD972A-A12C-44A4-98A5-755F9DF274CC" name="Start">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-CECD972A-A12C-44A4-98A5-755F9DF274CC]]></modeler:editor-resource-id>
+      </extensionElements>
+    </startEvent>
+    <userTask id="sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F" name="Request Submit" activiti:assignee="$INITIATOR" activiti:formKey="27138">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[27138]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[Request form]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-F991A971-966A-4E38-A286-FE92B22C33EB" sourceRef="sid-CECD972A-A12C-44A4-98A5-755F9DF274CC" targetRef="sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-F991A971-966A-4E38-A286-FE92B22C33EB]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-9250F697-A01B-43A4-A5E6-F0AEDC6E82B2" sourceRef="sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F" targetRef="sid-65387D01-0F63-4243-A628-7BAC108A8175">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-9250F697-A01B-43A4-A5E6-F0AEDC6E82B2]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <userTask id="sid-65387D01-0F63-4243-A628-7BAC108A8175" name="Review  Request, Approve&#xa;(Approver 1-?,And &#xa;Finance Approver)&#xa;" activiti:assignee="$INITIATOR" activiti:formKey="27125">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[27125]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[Form-Approval]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-65387D01-0F63-4243-A628-7BAC108A8175]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="sid-61F0B3CD-A6D1-4367-B156-B274262BE595" name="Approve..?">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-61F0B3CD-A6D1-4367-B156-B274262BE595]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <userTask id="sid-071E8AC2-563E-40BD-9A77-C87D54AC6417" name="Review Request,&#xa;Approve&#xa;(Department Head)" activiti:assignee="$INITIATOR" activiti:formKey="27123">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[27123]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[Department Head Approval]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-071E8AC2-563E-40BD-9A77-C87D54AC6417]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="sid-90AEB2B9-5289-459D-A6C7-BCDC8AE38FBC" name="Approve ?">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-90AEB2B9-5289-459D-A6C7-BCDC8AE38FBC]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <exclusiveGateway id="sid-0208DAA5-7520-48DE-A73B-50A19143C8B3" name="Fianance Special RC">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-0208DAA5-7520-48DE-A73B-50A19143C8B3]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <exclusiveGateway id="sid-9BE1AF66-7767-42F1-B100-2392E8BF215B" name="Greater than 1k">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-9BE1AF66-7767-42F1-B100-2392E8BF215B]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <sequenceFlow id="sid-359AB35C-05DE-4245-AB26-A3A575D1A8F1" sourceRef="sid-65387D01-0F63-4243-A628-7BAC108A8175" targetRef="sid-61F0B3CD-A6D1-4367-B156-B274262BE595">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-359AB35C-05DE-4245-AB26-A3A575D1A8F1]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-112298C8-FD61-409D-990C-255B98F1731C" sourceRef="sid-071E8AC2-563E-40BD-9A77-C87D54AC6417" targetRef="sid-90AEB2B9-5289-459D-A6C7-BCDC8AE38FBC">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-112298C8-FD61-409D-990C-255B98F1731C]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-C9254848-1102-4A44-BA4D-FB66F0C473BE" name="No" sourceRef="sid-61F0B3CD-A6D1-4367-B156-B274262BE595" targetRef="sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Reject" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-C9254848-1102-4A44-BA4D-FB66F0C473BE]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Reject')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-CE5222FF-68DB-4351-9BA3-F86DAC677128" name="Yes" sourceRef="sid-61F0B3CD-A6D1-4367-B156-B274262BE595" targetRef="sid-071E8AC2-563E-40BD-9A77-C87D54AC6417">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Accept" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-CE5222FF-68DB-4351-9BA3-F86DAC677128]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Accept')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-4A33AB74-AAAE-4FB3-90DB-AA56C0BB7A51" name="No" sourceRef="sid-90AEB2B9-5289-459D-A6C7-BCDC8AE38FBC" targetRef="sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Reject" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-4A33AB74-AAAE-4FB3-90DB-AA56C0BB7A51]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Reject')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-87F1C188-01B4-4CBB-B83F-EE31A3960D38" name="yes" sourceRef="sid-9BE1AF66-7767-42F1-B100-2392E8BF215B" targetRef="sid-C0136ED9-527B-4750-9844-BB6470FD3037">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="amount" modeler:rightValue="1000" modeler:operator=">"/>
+        <modeler:editor-resource-id><![CDATA[sid-87F1C188-01B4-4CBB-B83F-EE31A3960D38]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'amount') && amount > 1000)}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-3F52BF49-E720-40BF-9370-B45B6CDDF1B9" name="No" sourceRef="sid-9BE1AF66-7767-42F1-B100-2392E8BF215B" targetRef="sid-22F71366-5B4E-4488-BB1C-CFE4A2433968">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="amount" modeler:rightValue="1000" modeler:operator="&lt;"/>
+        <modeler:editor-resource-id><![CDATA[sid-3F52BF49-E720-40BF-9370-B45B6CDDF1B9]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'amount') && amount < 1000)}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-5C9DB9AD-4949-472C-9EBF-B603B3A6A591" name="Yes" sourceRef="sid-90AEB2B9-5289-459D-A6C7-BCDC8AE38FBC" targetRef="sid-0208DAA5-7520-48DE-A73B-50A19143C8B3">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Accept" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-5C9DB9AD-4949-472C-9EBF-B603B3A6A591]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Accept')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-3B14BF08-D7DA-4E5E-B134-08B613B18250" name="yes" sourceRef="sid-0208DAA5-7520-48DE-A73B-50A19143C8B3" targetRef="sid-CB88677A-7E4F-47AF-AF26-B38856A39E23">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="afoapproval" modeler:rightValue="Accept" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-3B14BF08-D7DA-4E5E-B134-08B613B18250]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'afoapproval') && afoapproval == 'Accept')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-03430B40-1F6C-4C89-95A0-415C6F0B00BD" sourceRef="sid-0208DAA5-7520-48DE-A73B-50A19143C8B3" targetRef="sid-9BE1AF66-7767-42F1-B100-2392E8BF215B">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="afoapproval" modeler:rightValue="no" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-03430B40-1F6C-4C89-95A0-415C6F0B00BD]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'afoapproval') && afoapproval == 'no')}]]></conditionExpression>
+    </sequenceFlow>
+    <userTask id="sid-7B4AA96C-0141-445E-A874-85B09F926415" name="Review Request,&#xa;Approve&#xa;(AC Manger1,2,3)" activiti:assignee="$INITIATOR" activiti:formKey="27130">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[27130]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[AC Manager Approval]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-7B4AA96C-0141-445E-A874-85B09F926415]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="sid-ACE4D7AB-3B5D-43F9-8539-956A80913C59" name="Approve ?">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-ACE4D7AB-3B5D-43F9-8539-956A80913C59]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <userTask id="sid-4CD2717C-6C36-4DBF-A097-85E8DFEECB18" name="Review Request, Approve &#xa;(City Manager)" activiti:assignee="$INITIATOR" activiti:formKey="27127">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[27127]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[City Manager Approval form]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-4CD2717C-6C36-4DBF-A097-85E8DFEECB18]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="sid-7A76A845-4300-41D3-9227-25FB8111404C" name="Approve">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-7A76A845-4300-41D3-9227-25FB8111404C]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <exclusiveGateway id="sid-22F71366-5B4E-4488-BB1C-CFE4A2433968" name="New Vendor ?" default="sid-793A84F1-86E4-43E8-9A6E-19CB6A168236">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-22F71366-5B4E-4488-BB1C-CFE4A2433968]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <sequenceFlow id="sid-1251B3E2-99CC-47B6-89A2-438274B053AC" sourceRef="sid-7B4AA96C-0141-445E-A874-85B09F926415" targetRef="sid-ACE4D7AB-3B5D-43F9-8539-956A80913C59">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-1251B3E2-99CC-47B6-89A2-438274B053AC]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-DC18FB87-39DE-459E-8CA2-AC4877150FC7" sourceRef="sid-4CD2717C-6C36-4DBF-A097-85E8DFEECB18" targetRef="sid-7A76A845-4300-41D3-9227-25FB8111404C">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-DC18FB87-39DE-459E-8CA2-AC4877150FC7]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-DD7575EF-CA78-47D1-A351-311BB3661031" name="No" sourceRef="sid-ACE4D7AB-3B5D-43F9-8539-956A80913C59" targetRef="sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Reject" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-DD7575EF-CA78-47D1-A351-311BB3661031]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Reject')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-96D57F3A-57E3-4B97-A2D8-30F3895E52B1" name="Yes" sourceRef="sid-ACE4D7AB-3B5D-43F9-8539-956A80913C59" targetRef="sid-4CD2717C-6C36-4DBF-A097-85E8DFEECB18">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Accept" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-96D57F3A-57E3-4B97-A2D8-30F3895E52B1]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Accept')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-590EC0DE-68FF-41C9-BB30-A65DDF7AFB27" name="No" sourceRef="sid-7A76A845-4300-41D3-9227-25FB8111404C" targetRef="sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Reject" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-590EC0DE-68FF-41C9-BB30-A65DDF7AFB27]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Reject')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-766A5AFF-9A34-4817-9F5E-9D058FC6DBAF" name="yes&#xa;" sourceRef="sid-22F71366-5B4E-4488-BB1C-CFE4A2433968" targetRef="sid-90FC8CD6-4A6D-4B71-9B75-D7F31D6E7816">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Accept" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-766A5AFF-9A34-4817-9F5E-9D058FC6DBAF]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Accept')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-25F23E7E-A7EF-43F2-8B09-D9B11601C930" name="yes" sourceRef="sid-7A76A845-4300-41D3-9227-25FB8111404C" targetRef="sid-22F71366-5B4E-4488-BB1C-CFE4A2433968">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Accept" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-25F23E7E-A7EF-43F2-8B09-D9B11601C930]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Accept')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-793A84F1-86E4-43E8-9A6E-19CB6A168236" name="No" sourceRef="sid-22F71366-5B4E-4488-BB1C-CFE4A2433968" targetRef="sid-53D5464C-796C-46DC-8349-5213D256878D">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-793A84F1-86E4-43E8-9A6E-19CB6A168236]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <userTask id="sid-CB88677A-7E4F-47AF-AF26-B38856A39E23" name="AFO Approver" activiti:assignee="$INITIATOR" activiti:formKey="27133">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[27133]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[AFO Approval]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-CB88677A-7E4F-47AF-AF26-B38856A39E23]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="sid-230294F2-809F-4198-82AB-DC1EB5E1C265" name="Approve ?">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-230294F2-809F-4198-82AB-DC1EB5E1C265]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <exclusiveGateway id="sid-F34E7EB1-184A-4973-9986-16E64C16A3EF" name="Require CFO ?">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-F34E7EB1-184A-4973-9986-16E64C16A3EF]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <userTask id="sid-4C8088CB-CDC1-41E6-B882-F7B1CA6BF02A" name="CFO Approver" activiti:assignee="$INITIATOR" activiti:formKey="27122">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[27122]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[CFO Approval]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-4C8088CB-CDC1-41E6-B882-F7B1CA6BF02A]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="sid-EC095F3C-F49C-41AA-A8CF-FFEBF5F112D2" name="Approve ?">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-EC095F3C-F49C-41AA-A8CF-FFEBF5F112D2]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <sequenceFlow id="sid-CE6C0DB3-D8BB-40B2-B383-317ED062DEBB" sourceRef="sid-CB88677A-7E4F-47AF-AF26-B38856A39E23" targetRef="sid-230294F2-809F-4198-82AB-DC1EB5E1C265">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-CE6C0DB3-D8BB-40B2-B383-317ED062DEBB]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-C7D2F3A2-4405-4644-B89F-DBBB4A62A4F1" sourceRef="sid-4C8088CB-CDC1-41E6-B882-F7B1CA6BF02A" targetRef="sid-EC095F3C-F49C-41AA-A8CF-FFEBF5F112D2">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-C7D2F3A2-4405-4644-B89F-DBBB4A62A4F1]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-77262F1E-6895-49B4-A0C7-A52B57C5AAE5" name="yes" sourceRef="sid-230294F2-809F-4198-82AB-DC1EB5E1C265" targetRef="sid-F34E7EB1-184A-4973-9986-16E64C16A3EF">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Accept" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-77262F1E-6895-49B4-A0C7-A52B57C5AAE5]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Accept')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-0DF5FA79-2F5A-4CAA-8D67-CCA9BA94FC9C" name="No" sourceRef="sid-230294F2-809F-4198-82AB-DC1EB5E1C265" targetRef="sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Reject" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-0DF5FA79-2F5A-4CAA-8D67-CCA9BA94FC9C]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Reject')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-8153C159-15B9-4793-A3D4-E9C2830D128C" name="yes" sourceRef="sid-F34E7EB1-184A-4973-9986-16E64C16A3EF" targetRef="sid-4C8088CB-CDC1-41E6-B882-F7B1CA6BF02A">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="cfoapprovalrequire" modeler:rightValue="yes" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-8153C159-15B9-4793-A3D4-E9C2830D128C]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'cfoapprovalrequire') && cfoapprovalrequire == 'yes')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-67F96A08-7AAC-45CC-8655-4D4D621BDB16" name="No" sourceRef="sid-F34E7EB1-184A-4973-9986-16E64C16A3EF" targetRef="sid-22F71366-5B4E-4488-BB1C-CFE4A2433968">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="cfoapprovalrequire" modeler:rightValue="no" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-67F96A08-7AAC-45CC-8655-4D4D621BDB16]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'cfoapprovalrequire') && cfoapprovalrequire == 'no')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-BC56B08A-B715-4F53-81BB-1A9102686EB1" name="No" sourceRef="sid-EC095F3C-F49C-41AA-A8CF-FFEBF5F112D2" targetRef="sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Reject" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-BC56B08A-B715-4F53-81BB-1A9102686EB1]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Reject')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-880C24EB-13CC-4D00-AE46-D504A6B2B28D" name="yes" sourceRef="sid-EC095F3C-F49C-41AA-A8CF-FFEBF5F112D2" targetRef="sid-22F71366-5B4E-4488-BB1C-CFE4A2433968">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Accept" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-880C24EB-13CC-4D00-AE46-D504A6B2B28D]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Accept')}]]></conditionExpression>
+    </sequenceFlow>
+    <userTask id="sid-C0136ED9-527B-4750-9844-BB6470FD3037" name="Purchasing  Approver" activiti:assignee="$INITIATOR" activiti:formKey="27132">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[27132]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[Purchasing Approval Form]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-C0136ED9-527B-4750-9844-BB6470FD3037]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="sid-7515FC8D-4282-4556-81B0-9DA3299999E4" name="Approve ?">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-7515FC8D-4282-4556-81B0-9DA3299999E4]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <exclusiveGateway id="sid-081CC251-7D30-41C9-ABBE-AD78E23CA656" name="Greater than 5k">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-081CC251-7D30-41C9-ABBE-AD78E23CA656]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <exclusiveGateway id="sid-1431AC99-7F97-4B82-BBDE-E5909A161AD5" name="Which ACM" default="sid-E7B2CD3E-ADD8-4299-938E-800079EEFC2F">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-1431AC99-7F97-4B82-BBDE-E5909A161AD5]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <sequenceFlow id="sid-66BAE750-7369-41E1-9FA4-40E82FFE9B40" sourceRef="sid-C0136ED9-527B-4750-9844-BB6470FD3037" targetRef="sid-7515FC8D-4282-4556-81B0-9DA3299999E4">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-66BAE750-7369-41E1-9FA4-40E82FFE9B40]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-DCB5B9D7-9998-40BF-B84A-A293E0AD1E83" name="yes" sourceRef="sid-7515FC8D-4282-4556-81B0-9DA3299999E4" targetRef="sid-081CC251-7D30-41C9-ABBE-AD78E23CA656">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Accept" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-DCB5B9D7-9998-40BF-B84A-A293E0AD1E83]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Accept')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-6F21F9ED-5AB6-4A59-BC84-0C16F78D4C8F" sourceRef="sid-1431AC99-7F97-4B82-BBDE-E5909A161AD5" targetRef="sid-7B4AA96C-0141-445E-A874-85B09F926415">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Accept" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-6F21F9ED-5AB6-4A59-BC84-0C16F78D4C8F]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Accept')}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-E7B2CD3E-ADD8-4299-938E-800079EEFC2F" name="ByPass No ACM" sourceRef="sid-1431AC99-7F97-4B82-BBDE-E5909A161AD5" targetRef="sid-4CD2717C-6C36-4DBF-A097-85E8DFEECB18">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-E7B2CD3E-ADD8-4299-938E-800079EEFC2F]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-D1447026-EA8E-4812-8A1B-EAA09794D6CE" sourceRef="sid-081CC251-7D30-41C9-ABBE-AD78E23CA656" targetRef="sid-1431AC99-7F97-4B82-BBDE-E5909A161AD5">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="amount" modeler:rightValue="5000" modeler:operator=">="/>
+        <modeler:editor-resource-id><![CDATA[sid-D1447026-EA8E-4812-8A1B-EAA09794D6CE]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'amount') && amount >= 5000)}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-14CD76FC-3F11-4957-AC9F-685093575EB5" name="No" sourceRef="sid-081CC251-7D30-41C9-ABBE-AD78E23CA656" targetRef="sid-22F71366-5B4E-4488-BB1C-CFE4A2433968">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="amount" modeler:rightValue="5000" modeler:operator="&lt;"/>
+        <modeler:editor-resource-id><![CDATA[sid-14CD76FC-3F11-4957-AC9F-685093575EB5]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'amount') && amount < 5000)}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-9944FC27-10F1-41E0-9AB4-A24343CCD28E" name="No" sourceRef="sid-7515FC8D-4282-4556-81B0-9DA3299999E4" targetRef="sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftFormFieldId="status" modeler:rightValue="Reject" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-9944FC27-10F1-41E0-9AB4-A24343CCD28E]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'status') && status == 'Reject')}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_Collaboration">
+    <bpmndi:BPMNPlane bpmnElement="Collaboration" id="BPMNPlane_Collaboration">
+      <bpmndi:BPMNShape bpmnElement="sid-91D004B7-9D99-405F-9119-891FC0AA25A9" id="BPMNShape_sid-91D004B7-9D99-405F-9119-891FC0AA25A9">
+        <omgdc:Bounds height="1759.9999999999998" width="1579.0" x="0.0" y="15.000000000000002"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-FC966345-F5A8-4A6C-A459-806B1F8A8400" id="BPMNShape_sid-FC966345-F5A8-4A6C-A459-806B1F8A8400">
+        <omgdc:Bounds height="191.7531940075974" width="1549.0" x="30.0" y="15.000000000000002"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-BDE44680-C48E-40AD-B7EA-E1F0F749998E" id="BPMNShape_sid-BDE44680-C48E-40AD-B7EA-E1F0F749998E">
+        <omgdc:Bounds height="318.61384426520726" width="1549.0" x="30.0" y="1456.3861557347925"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-53D5464C-796C-46DC-8349-5213D256878D" id="BPMNShape_sid-53D5464C-796C-46DC-8349-5213D256878D">
+        <omgdc:Bounds height="80.0" width="100.0" x="1215.0" y="1545.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-3C3FE247-CCC6-4643-BEA1-FFEDB9FDD9B2" id="BPMNShape_sid-3C3FE247-CCC6-4643-BEA1-FFEDB9FDD9B2">
+        <omgdc:Bounds height="40.0" width="40.0" x="1350.0000000000005" y="1569.0948470333387"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-4F365CF7-9763-47DB-B6D5-01615127E480" id="BPMNShape_sid-4F365CF7-9763-47DB-B6D5-01615127E480">
+        <omgdc:Bounds height="80.0" width="100.0" x="1470.0000000000002" y="1500.0000000000005"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-F0CC5D42-B35B-4EBF-BEF3-CD65E4263739" id="BPMNShape_sid-F0CC5D42-B35B-4EBF-BEF3-CD65E4263739">
+        <omgdc:Bounds height="28.0" width="28.0" x="1506.0000000000005" y="1710.0000000000005"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-90FC8CD6-4A6D-4B71-9B75-D7F31D6E7816" id="BPMNShape_sid-90FC8CD6-4A6D-4B71-9B75-D7F31D6E7816">
+        <omgdc:Bounds height="80.0" width="100.0" x="1035.0000000000002" y="1545.0000000000002"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-28887CD4-27DC-403C-953E-6E83362EDB53" id="BPMNShape_sid-28887CD4-27DC-403C-953E-6E83362EDB53">
+        <omgdc:Bounds height="167.1555491900772" width="1549.0" x="30.0" y="206.7531940075974"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-CECD972A-A12C-44A4-98A5-755F9DF274CC" id="BPMNShape_sid-CECD972A-A12C-44A4-98A5-755F9DF274CC">
+        <omgdc:Bounds height="30.0" width="30.0" x="90.00000000000001" y="250.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F" id="BPMNShape_sid-4CFE466F-08DE-4B6F-9945-56BD6859C97F">
+        <omgdc:Bounds height="80.0" width="100.0" x="150.0" y="225.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-08EE043A-AA16-4720-AD91-890E4DA92998" id="BPMNShape_sid-08EE043A-AA16-4720-AD91-890E4DA92998">
+        <omgdc:Bounds height="259.0606062714973" width="1549.0" x="30.0" y="373.9087431976746"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-65387D01-0F63-4243-A628-7BAC108A8175" id="BPMNShape_sid-65387D01-0F63-4243-A628-7BAC108A8175">
+        <omgdc:Bounds height="100.99999999999994" width="114.00000000000003" x="143.0" y="394.7503944863031"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-61F0B3CD-A6D1-4367-B156-B274262BE595" id="BPMNShape_sid-61F0B3CD-A6D1-4367-B156-B274262BE595">
+        <omgdc:Bounds height="40.0" width="40.0" x="319.55554815280595" y="424.75039448630315"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-071E8AC2-563E-40BD-9A77-C87D54AC6417" id="BPMNShape_sid-071E8AC2-563E-40BD-9A77-C87D54AC6417">
+        <omgdc:Bounds height="84.0" width="115.0" x="420.0" y="403.2503944863031"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-90AEB2B9-5289-459D-A6C7-BCDC8AE38FBC" id="BPMNShape_sid-90AEB2B9-5289-459D-A6C7-BCDC8AE38FBC">
+        <omgdc:Bounds height="40.0" width="40.0" x="585.0000000000003" y="424.7503944863031"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-0208DAA5-7520-48DE-A73B-50A19143C8B3" id="BPMNShape_sid-0208DAA5-7520-48DE-A73B-50A19143C8B3">
+        <omgdc:Bounds height="40.0" width="40.0" x="585.0000000000003" y="544.7503944863031"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-9BE1AF66-7767-42F1-B100-2392E8BF215B" id="BPMNShape_sid-9BE1AF66-7767-42F1-B100-2392E8BF215B">
+        <omgdc:Bounds height="40.0" width="40.0" x="435.00000000000006" y="544.7503944863031"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-8F937237-9A88-480B-BC18-3529916803DD" id="BPMNShape_sid-8F937237-9A88-480B-BC18-3529916803DD">
+        <omgdc:Bounds height="297.75340684409525" width="1549.0" x="30.0" y="1158.6327488906973"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-7B4AA96C-0141-445E-A874-85B09F926415" id="BPMNShape_sid-7B4AA96C-0141-445E-A874-85B09F926415">
+        <omgdc:Bounds height="86.0" width="111.0" x="734.0" y="1225.2489566729869"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-ACE4D7AB-3B5D-43F9-8539-956A80913C59" id="BPMNShape_sid-ACE4D7AB-3B5D-43F9-8539-956A80913C59">
+        <omgdc:Bounds height="40.0" width="40.0" x="900.0" y="1245.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-4CD2717C-6C36-4DBF-A097-85E8DFEECB18" id="BPMNShape_sid-4CD2717C-6C36-4DBF-A097-85E8DFEECB18">
+        <omgdc:Bounds height="80.0" width="100.0" x="990.0" y="1225.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-7A76A845-4300-41D3-9227-25FB8111404C" id="BPMNShape_sid-7A76A845-4300-41D3-9227-25FB8111404C">
+        <omgdc:Bounds height="40.0" width="40.0" x="1125.0" y="1245.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-22F71366-5B4E-4488-BB1C-CFE4A2433968" id="BPMNShape_sid-22F71366-5B4E-4488-BB1C-CFE4A2433968">
+        <omgdc:Bounds height="40.0" width="40.0" x="1215.0000000000002" y="1365.0000000000016"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-9BC19948-0960-4A4A-BFEE-0F779F5C8BE0" id="BPMNShape_sid-9BC19948-0960-4A4A-BFEE-0F779F5C8BE0">
+        <omgdc:Bounds height="227.90999257742976" width="1549.0" x="30.0" y="632.9693494691719"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-CB88677A-7E4F-47AF-AF26-B38856A39E23" id="BPMNShape_sid-CB88677A-7E4F-47AF-AF26-B38856A39E23">
+        <omgdc:Bounds height="80.0" width="100.0" x="555.0000000000002" y="675.0000000000002"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-230294F2-809F-4198-82AB-DC1EB5E1C265" id="BPMNShape_sid-230294F2-809F-4198-82AB-DC1EB5E1C265">
+        <omgdc:Bounds height="40.0" width="40.0" x="690.0000000000003" y="695.0000000000003"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-F34E7EB1-184A-4973-9986-16E64C16A3EF" id="BPMNShape_sid-F34E7EB1-184A-4973-9986-16E64C16A3EF">
+        <omgdc:Bounds height="40.0" width="40.0" x="780.0000000000003" y="695.0000000000003"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-4C8088CB-CDC1-41E6-B882-F7B1CA6BF02A" id="BPMNShape_sid-4C8088CB-CDC1-41E6-B882-F7B1CA6BF02A">
+        <omgdc:Bounds height="80.0" width="99.99999999999989" x="750.0000000000002" y="780.0000000000002"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-EC095F3C-F49C-41AA-A8CF-FFEBF5F112D2" id="BPMNShape_sid-EC095F3C-F49C-41AA-A8CF-FFEBF5F112D2">
+        <omgdc:Bounds height="40.0" width="40.0" x="975.0000000000003" y="800.0000000000003"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-09E1131B-B36A-4D21-91B8-6A3DFB9D6B79" id="BPMNShape_sid-09E1131B-B36A-4D21-91B8-6A3DFB9D6B79">
+        <omgdc:Bounds height="297.7534068440956" width="1549.0" x="30.0" y="860.8793420466017"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-C0136ED9-527B-4750-9844-BB6470FD3037" id="BPMNShape_sid-C0136ED9-527B-4750-9844-BB6470FD3037">
+        <omgdc:Bounds height="80.0" width="100.0" x="660.0" y="915.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-7515FC8D-4282-4556-81B0-9DA3299999E4" id="BPMNShape_sid-7515FC8D-4282-4556-81B0-9DA3299999E4">
+        <omgdc:Bounds height="40.0" width="40.0" x="825.0000000000001" y="938.98433281978"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-081CC251-7D30-41C9-ABBE-AD78E23CA656" id="BPMNShape_sid-081CC251-7D30-41C9-ABBE-AD78E23CA656">
+        <omgdc:Bounds height="40.0" width="40.0" x="930.0000000000001" y="938.9843328197799"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-1431AC99-7F97-4B82-BBDE-E5909A161AD5" id="BPMNShape_sid-1431AC99-7F97-4B82-BBDE-E5909A161AD5">
+        <omgdc:Bounds height="39.999999999999886" width="40.0" x="885.0" y="1080.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-C7D2F3A2-4405-4644-B89F-DBBB4A62A4F1" id="BPMNEdge_sid-C7D2F3A2-4405-4644-B89F-DBBB4A62A4F1">
+        <omgdi:waypoint x="850.0000000000001" y="820.0000000000002"/>
+        <omgdi:waypoint x="975.0000000000003" y="820.0000000000003"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-359AB35C-05DE-4245-AB26-A3A575D1A8F1" id="BPMNEdge_sid-359AB35C-05DE-4245-AB26-A3A575D1A8F1">
+        <omgdi:waypoint x="257.0" y="445.04617473024734"/>
+        <omgdi:waypoint x="319.62694839458067" y="444.82179472807786"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-03430B40-1F6C-4C89-95A0-415C6F0B00BD" id="BPMNEdge_sid-03430B40-1F6C-4C89-95A0-415C6F0B00BD">
+        <omgdi:waypoint x="585.0000000000003" y="564.7503944863031"/>
+        <omgdi:waypoint x="475.00000000000006" y="564.7503944863031"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-DD7575EF-CA78-47D1-A351-311BB3661031" id="BPMNEdge_sid-DD7575EF-CA78-47D1-A351-311BB3661031">
+        <omgdi:waypoint x="920.1125703049099" y="1245.11257030491"/>
+        <omgdi:waypoint x="920.5" y="1176.6666259765625"/>
+        <omgdi:waypoint x="1095.0" y="1176.6666259765625"/>
+        <omgdi:waypoint x="1095.0" y="270.6666564941406"/>
+        <omgdi:waypoint x="250.0" y="265.3165729884995"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-590EC0DE-68FF-41C9-BB30-A65DDF7AFB27" id="BPMNEdge_sid-590EC0DE-68FF-41C9-BB30-A65DDF7AFB27">
+        <omgdi:waypoint x="1145.0100453610837" y="1245.0100453610837"/>
+        <omgdi:waypoint x="1145.5" y="270.015625"/>
+        <omgdi:waypoint x="250.0" y="265.26523664727654"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-8153C159-15B9-4793-A3D4-E9C2830D128C" id="BPMNEdge_sid-8153C159-15B9-4793-A3D4-E9C2830D128C">
+        <omgdi:waypoint x="800.0000000000003" y="735.0000000000003"/>
+        <omgdi:waypoint x="800.0000000000002" y="780.0000000000002"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-3B14BF08-D7DA-4E5E-B134-08B613B18250" id="BPMNEdge_sid-3B14BF08-D7DA-4E5E-B134-08B613B18250">
+        <omgdi:waypoint x="605.0000000000003" y="584.7503944863031"/>
+        <omgdi:waypoint x="605.0000000000002" y="675.0000000000002"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-96D57F3A-57E3-4B97-A2D8-30F3895E52B1" id="BPMNEdge_sid-96D57F3A-57E3-4B97-A2D8-30F3895E52B1">
+        <omgdi:waypoint x="940.0" y="1265.0"/>
+        <omgdi:waypoint x="990.0" y="1265.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-112298C8-FD61-409D-990C-255B98F1731C" id="BPMNEdge_sid-112298C8-FD61-409D-990C-255B98F1731C">
+        <omgdi:waypoint x="535.0" y="445.02490429022464"/>
+        <omgdi:waypoint x="585.0781250000003" y="444.8285194863031"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-DCB5B9D7-9998-40BF-B84A-A293E0AD1E83" id="BPMNEdge_sid-DCB5B9D7-9998-40BF-B84A-A293E0AD1E83">
+        <omgdi:waypoint x="865.0000000000001" y="958.98433281978"/>
+        <omgdi:waypoint x="930.0000000000001" y="958.9843328197799"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-77262F1E-6895-49B4-A0C7-A52B57C5AAE5" id="BPMNEdge_sid-77262F1E-6895-49B4-A0C7-A52B57C5AAE5">
+        <omgdi:waypoint x="729.7802197802201" y="715.2197802197805"/>
+        <omgdi:waypoint x="755.0000000000002" y="715.5000000000003"/>
+        <omgdi:waypoint x="752.7777709960938" y="715.2534790039062"/>
+        <omgdi:waypoint x="780.1067826113789" y="715.1067826113789"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-B85D707E-64E0-4E65-9A75-95AA4E6FAF12" id="BPMNEdge_sid-B85D707E-64E0-4E65-9A75-95AA4E6FAF12">
+        <omgdi:waypoint x="1315.0" y="1586.9499271587326"/>
+        <omgdi:waypoint x="1350.7506948576756" y="1588.3441521756636"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-67F96A08-7AAC-45CC-8655-4D4D621BDB16" id="BPMNEdge_sid-67F96A08-7AAC-45CC-8655-4D4D621BDB16">
+        <omgdi:waypoint x="819.9770642201838" y="715.0229357798169"/>
+        <omgdi:waypoint x="1235.5000000000002" y="715.5000000000003"/>
+        <omgdi:waypoint x="1235.0149253731345" y="1365.0149253731358"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-87F1C188-01B4-4CBB-B83F-EE31A3960D38" id="BPMNEdge_sid-87F1C188-01B4-4CBB-B83F-EE31A3960D38">
+        <omgdi:waypoint x="455.0255918364572" y="584.724802649846"/>
+        <omgdi:waypoint x="455.50000000000006" y="955.0"/>
+        <omgdi:waypoint x="660.0" y="955.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-BC56B08A-B715-4F53-81BB-1A9102686EB1" id="BPMNEdge_sid-BC56B08A-B715-4F53-81BB-1A9102686EB1">
+        <omgdi:waypoint x="995.0179056533825" y="800.0179056533825"/>
+        <omgdi:waypoint x="995.5000000000003" y="262.0171685420042"/>
+        <omgdi:waypoint x="250.0" y="264.8125184501574"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-B8003DED-F324-41F0-84FA-252117117472" id="BPMNEdge_sid-B8003DED-F324-41F0-84FA-252117117472">
+        <omgdi:waypoint x="1520.0000000000002" y="1580.0000000000005"/>
+        <omgdi:waypoint x="1520.0000000000005" y="1710.0000000000005"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-DCF6853D-5F8B-4641-8254-284812875962" id="BPMNEdge_sid-DCF6853D-5F8B-4641-8254-284812875962">
+        <omgdi:waypoint x="1370.1114348578637" y="1608.9834121754755"/>
+        <omgdi:waypoint x="1370.5000000000005" y="1678.3333740234375"/>
+        <omgdi:waypoint x="1263.6666259765623" y="1678.3333740234375"/>
+        <omgdi:waypoint x="1264.4285542390858" y="1625.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-880C24EB-13CC-4D00-AE46-D504A6B2B28D" id="BPMNEdge_sid-880C24EB-13CC-4D00-AE46-D504A6B2B28D">
+        <omgdi:waypoint x="1014.9585062240667" y="820.041493775934"/>
+        <omgdi:waypoint x="1235.5000000000002" y="820.5000000000002"/>
+        <omgdi:waypoint x="1235.0176991150445" y="1365.0176991150458"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-9250F697-A01B-43A4-A5E6-F0AEDC6E82B2" id="BPMNEdge_sid-9250F697-A01B-43A4-A5E6-F0AEDC6E82B2">
+        <omgdi:waypoint x="200.0" y="305.0"/>
+        <omgdi:waypoint x="200.0" y="394.7503944863031"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-4A33AB74-AAAE-4FB3-90DB-AA56C0BB7A51" id="BPMNEdge_sid-4A33AB74-AAAE-4FB3-90DB-AA56C0BB7A51">
+        <omgdi:waypoint x="605.0545701417348" y="424.80496462803745"/>
+        <omgdi:waypoint x="605.5000000000003" y="262.0"/>
+        <omgdi:waypoint x="250.0" y="264.6300863131936"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-C9254848-1102-4A44-BA4D-FB66F0C473BE" id="BPMNEdge_sid-C9254848-1102-4A44-BA4D-FB66F0C473BE">
+        <omgdi:waypoint x="339.61102653346916" y="424.80587286696635"/>
+        <omgdi:waypoint x="340.05554815280595" y="265.0"/>
+        <omgdi:waypoint x="250.0" y="265.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-3BF12DB5-6A9E-46F9-B58E-A141F981EA7D" id="BPMNEdge_sid-3BF12DB5-6A9E-46F9-B58E-A141F981EA7D">
+        <omgdi:waypoint x="1135.0000000000002" y="1585.0000000000002"/>
+        <omgdi:waypoint x="1215.0" y="1585.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-F991A971-966A-4E38-A286-FE92B22C33EB" id="BPMNEdge_sid-F991A971-966A-4E38-A286-FE92B22C33EB">
+        <omgdi:waypoint x="120.00000000000001" y="265.0"/>
+        <omgdi:waypoint x="150.0" y="265.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-6F21F9ED-5AB6-4A59-BC84-0C16F78D4C8F" id="BPMNEdge_sid-6F21F9ED-5AB6-4A59-BC84-0C16F78D4C8F">
+        <omgdi:waypoint x="885.0862068965517" y="1100.0862068965516"/>
+        <omgdi:waypoint x="789.5" y="1100.5"/>
+        <omgdi:waypoint x="789.5" y="1225.2489566729869"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-5C9DB9AD-4949-472C-9EBF-B603B3A6A591" id="BPMNEdge_sid-5C9DB9AD-4949-472C-9EBF-B603B3A6A591">
+        <omgdi:waypoint x="605.0000000000003" y="464.7503944863031"/>
+        <omgdi:waypoint x="605.0000000000003" y="544.7503944863031"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-DC18FB87-39DE-459E-8CA2-AC4877150FC7" id="BPMNEdge_sid-DC18FB87-39DE-459E-8CA2-AC4877150FC7">
+        <omgdi:waypoint x="1090.0" y="1265.0"/>
+        <omgdi:waypoint x="1125.0" y="1265.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-793A84F1-86E4-43E8-9A6E-19CB6A168236" id="BPMNEdge_sid-793A84F1-86E4-43E8-9A6E-19CB6A168236">
+        <omgdi:waypoint x="1254.6721311475412" y="1385.3278688524606"/>
+        <omgdi:waypoint x="1265.0" y="1385.5000000000016"/>
+        <omgdi:waypoint x="1265.0" y="1545.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-CE5222FF-68DB-4351-9BA3-F86DAC677128" id="BPMNEdge_sid-CE5222FF-68DB-4351-9BA3-F86DAC677128">
+        <omgdi:waypoint x="359.48331701702136" y="444.82262562208774"/>
+        <omgdi:waypoint x="420.0" y="445.04197726027473"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-3F52BF49-E720-40BF-9370-B45B6CDDF1B9" id="BPMNEdge_sid-3F52BF49-E720-40BF-9370-B45B6CDDF1B9">
+        <omgdi:waypoint x="435.1113172793851" y="564.8617117656881"/>
+        <omgdi:waypoint x="365.66668701171875" y="565.2503944863031"/>
+        <omgdi:waypoint x="365.66668701171875" y="1385.5000000000016"/>
+        <omgdi:waypoint x="1215.0114964555287" y="1385.01149645553"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-25F23E7E-A7EF-43F2-8B09-D9B11601C930" id="BPMNEdge_sid-25F23E7E-A7EF-43F2-8B09-D9B11601C930">
+        <omgdi:waypoint x="1145.0829875518673" y="1284.9170124481327"/>
+        <omgdi:waypoint x="1145.5" y="1385.0000000000016"/>
+        <omgdi:waypoint x="1215.0000000000002" y="1385.0000000000016"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-CE6C0DB3-D8BB-40B2-B383-317ED062DEBB" id="BPMNEdge_sid-CE6C0DB3-D8BB-40B2-B383-317ED062DEBB">
+        <omgdi:waypoint x="655.0000000000002" y="715.0000000000002"/>
+        <omgdi:waypoint x="690.0000000000003" y="715.0000000000003"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-66BAE750-7369-41E1-9FA4-40E82FFE9B40" id="BPMNEdge_sid-66BAE750-7369-41E1-9FA4-40E82FFE9B40">
+        <omgdi:waypoint x="760.0" y="955.0"/>
+        <omgdi:waypoint x="792.5" y="955.0"/>
+        <omgdi:waypoint x="792.5" y="959.48433281978"/>
+        <omgdi:waypoint x="825.1886792452831" y="959.173012065063"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-1251B3E2-99CC-47B6-89A2-438274B053AC" id="BPMNEdge_sid-1251B3E2-99CC-47B6-89A2-438274B053AC">
+        <omgdi:waypoint x="845.0" y="1268.2489566729869"/>
+        <omgdi:waypoint x="872.5" y="1268.2489566729869"/>
+        <omgdi:waypoint x="872.5" y="1265.5"/>
+        <omgdi:waypoint x="900.2083333333334" y="1265.2083333333333"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-D1447026-EA8E-4812-8A1B-EAA09794D6CE" id="BPMNEdge_sid-D1447026-EA8E-4812-8A1B-EAA09794D6CE">
+        <omgdi:waypoint x="950.1391808203339" y="978.8451519994461"/>
+        <omgdi:waypoint x="950.5000000000001" y="1030.3333129882812"/>
+        <omgdi:waypoint x="905.5" y="1030.3333129882812"/>
+        <omgdi:waypoint x="905.1425177734034" y="1080.1425177734034"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-14CD76FC-3F11-4957-AC9F-685093575EB5" id="BPMNEdge_sid-14CD76FC-3F11-4957-AC9F-685093575EB5">
+        <omgdi:waypoint x="969.9649737302979" y="959.0193590894821"/>
+        <omgdi:waypoint x="1235.0000000000002" y="959.4843328197799"/>
+        <omgdi:waypoint x="1235.0000000000002" y="1365.0000000000016"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-766A5AFF-9A34-4817-9F5E-9D058FC6DBAF" id="BPMNEdge_sid-766A5AFF-9A34-4817-9F5E-9D058FC6DBAF">
+        <omgdi:waypoint x="1235.2589929877145" y="1404.7410070122874"/>
+        <omgdi:waypoint x="1235.5000000000002" y="1423.111083984375"/>
+        <omgdi:waypoint x="1085.0000000000002" y="1423.111083984375"/>
+        <omgdi:waypoint x="1085.0000000000002" y="1545.0000000000002"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-0DF5FA79-2F5A-4CAA-8D67-CCA9BA94FC9C" id="BPMNEdge_sid-0DF5FA79-2F5A-4CAA-8D67-CCA9BA94FC9C">
+        <omgdi:waypoint x="710.0221975582689" y="695.0221975582689"/>
+        <omgdi:waypoint x="710.5000000000003" y="265.0"/>
+        <omgdi:waypoint x="250.0" y="265.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-9944FC27-10F1-41E0-9AB4-A24343CCD28E" id="BPMNEdge_sid-9944FC27-10F1-41E0-9AB4-A24343CCD28E">
+        <omgdi:waypoint x="845.0143784691708" y="938.9987112889506"/>
+        <omgdi:waypoint x="845.5000000000001" y="264.0000026490954"/>
+        <omgdi:waypoint x="250.0" y="264.92254087134745"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-D611816A-76C0-4E5E-A20E-F6C0B9886186" id="BPMNEdge_sid-D611816A-76C0-4E5E-A20E-F6C0B9886186">
+        <omgdi:waypoint x="1370.2016338510591" y="1569.2964808843974"/>
+        <omgdi:waypoint x="1370.5000000000005" y="1540.0000000000005"/>
+        <omgdi:waypoint x="1470.0000000000002" y="1540.0000000000005"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-E7B2CD3E-ADD8-4299-938E-800079EEFC2F" id="BPMNEdge_sid-E7B2CD3E-ADD8-4299-938E-800079EEFC2F">
+        <omgdi:waypoint x="924.9261992619926" y="1100.0738007380073"/>
+        <omgdi:waypoint x="1040.0" y="1100.5"/>
+        <omgdi:waypoint x="1040.0" y="1225.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
