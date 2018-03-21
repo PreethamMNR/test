@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test" xmlns:modeler="http://activiti.com/modeler" modeler:version="1.0en" modeler:exportDateTime="20180321023904657" modeler:modelId="29219" modeler:modelVersion="4" modeler:modelLastUpdated="1520943981309">
+  <process id="LabelTest" name="LabelTest" isExecutable="true">
+    <userTask id="ASSIGNMENT63_LabelTest" name="LabelTest" activiti:assignee="$INITIATOR" activiti:formKey="29161">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[29161]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[asda]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[ASSIGNMENT63_LabelTest]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <userTask id="Assignment1_LabelTest" name="editOpt" activiti:assignee="$INITIATOR" activiti:formKey="29125">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[29125]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[EditOptionSec]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[Assignment1_LabelTest]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <endEvent id="END52_LabelTest" name="END52_LabelTest">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[END52_LabelTest]]></modeler:editor-resource-id>
+      </extensionElements>
+    </endEvent>
+    <startEvent id="Start1_LabelTest" name="Start1_LabelTest">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[Start1_LabelTest]]></modeler:editor-resource-id>
+      </extensionElements>
+    </startEvent>
+    <sequenceFlow id="SequenceFlow1" sourceRef="Assignment1_LabelTest" targetRef="END52_LabelTest">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[SequenceFlow1]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="SequenceFlow2" name="[Always]" sourceRef="Start1_LabelTest" targetRef="ASSIGNMENT63_LabelTest">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[SequenceFlow2]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="SequenceFlow3" name="LabelFA" sourceRef="ASSIGNMENT63_LabelTest" targetRef="Assignment1_LabelTest">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[SequenceFlow3]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <textAnnotation id="Annotation1">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[Annotation1]]></modeler:editor-resource-id>
+      </extensionElements>
+      <text>this is for checking annotation in pega</text>
+    </textAnnotation>
+    <textAnnotation id="Annotation2">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[Annotation2]]></modeler:editor-resource-id>
+      </extensionElements>
+      <text>this is for activiti</text>
+    </textAnnotation>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_LabelTest">
+    <bpmndi:BPMNPlane bpmnElement="LabelTest" id="BPMNPlane_LabelTest">
+      <bpmndi:BPMNShape bpmnElement="ASSIGNMENT63_LabelTest" id="BPMNShape_ASSIGNMENT63_LabelTest">
+        <omgdc:Bounds height="55.0" width="110.0" x="165.0" y="30.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Assignment1_LabelTest" id="BPMNShape_Assignment1_LabelTest">
+        <omgdc:Bounds height="55.0" width="110.0" x="376.0" y="30.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="END52_LabelTest" id="BPMNShape_END52_LabelTest">
+        <omgdc:Bounds height="28.0" width="28.0" x="585.0" y="43.5"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Start1_LabelTest" id="BPMNShape_Start1_LabelTest">
+        <omgdc:Bounds height="30.0" width="30.0" x="45.0" y="42.5"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Annotation1" id="BPMNShape_Annotation1">
+        <omgdc:Bounds height="50.0" width="100.0" x="110.0" y="130.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Annotation2" id="BPMNShape_Annotation2">
+        <omgdc:Bounds height="50.0" width="100.0" x="381.0" y="142.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow3" id="BPMNEdge_SequenceFlow3">
+        <omgdi:waypoint x="275.0" y="57.5"/>
+        <omgdi:waypoint x="376.0" y="57.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow2" id="BPMNEdge_SequenceFlow2">
+        <omgdi:waypoint x="75.0" y="57.5"/>
+        <omgdi:waypoint x="165.0" y="57.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow1" id="BPMNEdge_SequenceFlow1">
+        <omgdi:waypoint x="486.0" y="57.5"/>
+        <omgdi:waypoint x="585.0" y="57.5"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
