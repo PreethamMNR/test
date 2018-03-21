@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef" xmlns:modeler="http://activiti.com/modeler" modeler:version="1.0en" modeler:exportDateTime="20180321065415511" modeler:modelId="29041" modeler:modelVersion="3" modeler:modelLastUpdated="1521625660275">
+  <signal id="orderDispatched" name="orderDispatched" activiti:scope="global"/>
+  <message id="orderCancelled" name="orderCancelled"/>
+  <process id="GenerateTestCases" name="GenerateTestCases" isExecutable="true">
+    <startEvent id="startEvent1">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[startEvent1]]></modeler:editor-resource-id>
+      </extensionElements>
+    </startEvent>
+    <userTask id="sid-E63103FC-D347-4407-8921-612E2DDEB6F3" name="OrderDetails" activiti:assignee="$INITIATOR">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:editor-resource-id><![CDATA[sid-E63103FC-D347-4407-8921-612E2DDEB6F3]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-1B4DD78F-7566-4BA1-AB4E-55AC2279889A" sourceRef="startEvent1" targetRef="sid-E63103FC-D347-4407-8921-612E2DDEB6F3">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-1B4DD78F-7566-4BA1-AB4E-55AC2279889A]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <exclusiveGateway id="sid-6C9098C3-9DAC-4114-BF53-F15D0549CDDC">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-6C9098C3-9DAC-4114-BF53-F15D0549CDDC]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <sequenceFlow id="sid-E6C86FD2-F774-46D4-90D0-E2234ED0D3DD" sourceRef="sid-E63103FC-D347-4407-8921-612E2DDEB6F3" targetRef="sid-6C9098C3-9DAC-4114-BF53-F15D0549CDDC">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-E6C86FD2-F774-46D4-90D0-E2234ED0D3DD]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <serviceTask id="sid-0E19A8FC-184B-4911-9046-DA88B0C938FD" name="Accept Mail" activiti:type="mail">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:string><![CDATA[example@gmail.com]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[from@gmail.com]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[example subject]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="cc">
+          <activiti:string><![CDATA[cc@gmail.com]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="bcc">
+          <activiti:string><![CDATA[bcc@gmail.com]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="html">
+          <activiti:string><![CDATA[Order Approved]]></activiti:string>
+        </activiti:field>
+        <modeler:editor-resource-id><![CDATA[sid-0E19A8FC-184B-4911-9046-DA88B0C938FD]]></modeler:editor-resource-id>
+      </extensionElements>
+    </serviceTask>
+    <serviceTask id="sid-EF0C03BB-7172-42CE-923F-E496F70B4A2F" name="Reject Mail" activiti:type="mail">
+      <extensionElements>
+        <activiti:field name="to">
+          <activiti:string><![CDATA[example@gmail.com]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="from">
+          <activiti:string><![CDATA[from@gmail.com]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="subject">
+          <activiti:string><![CDATA[Rejected]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="cc">
+          <activiti:string><![CDATA[cc@gmail.com]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="bcc">
+          <activiti:string><![CDATA[bcc@gmail.com]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="html">
+          <activiti:string><![CDATA[Order Rejected]]></activiti:string>
+        </activiti:field>
+        <modeler:editor-resource-id><![CDATA[sid-EF0C03BB-7172-42CE-923F-E496F70B4A2F]]></modeler:editor-resource-id>
+      </extensionElements>
+    </serviceTask>
+    <receiveTask id="sid-BD72D381-DED7-4AA8-B7EB-EE480901A799" name="Recieve Order">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-BD72D381-DED7-4AA8-B7EB-EE480901A799]]></modeler:editor-resource-id>
+      </extensionElements>
+    </receiveTask>
+    <sequenceFlow id="sid-63C868FF-B9EA-45A0-9DA0-BB4C23F280F8" sourceRef="sid-0E19A8FC-184B-4911-9046-DA88B0C938FD" targetRef="sid-BD72D381-DED7-4AA8-B7EB-EE480901A799">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-63C868FF-B9EA-45A0-9DA0-BB4C23F280F8]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <intermediateCatchEvent id="sid-B2874174-D23B-4896-B5DB-495755B97A51">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-B2874174-D23B-4896-B5DB-495755B97A51]]></modeler:editor-resource-id>
+      </extensionElements>
+      <timerEventDefinition>
+        <timeDuration>P1D</timeDuration>
+      </timerEventDefinition>
+    </intermediateCatchEvent>
+    <endEvent id="sid-A43629EA-C9CF-4BF1-A79B-A5B247C7F10D">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-A43629EA-C9CF-4BF1-A79B-A5B247C7F10D]]></modeler:editor-resource-id>
+      </extensionElements>
+    </endEvent>
+    <sequenceFlow id="sid-515F5846-A652-4BC3-A4A2-1E27FA7E089A" sourceRef="sid-BD72D381-DED7-4AA8-B7EB-EE480901A799" targetRef="sid-B2874174-D23B-4896-B5DB-495755B97A51">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-515F5846-A652-4BC3-A4A2-1E27FA7E089A]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <userTask id="sid-788C4062-FBEB-4A06-BF40-48319CF68E1E" name="Dispatch Order" activiti:assignee="$INITIATOR">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:editor-resource-id><![CDATA[sid-788C4062-FBEB-4A06-BF40-48319CF68E1E]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-04C94A5C-BA30-49F7-9927-31FD05750062" sourceRef="sid-B2874174-D23B-4896-B5DB-495755B97A51" targetRef="sid-788C4062-FBEB-4A06-BF40-48319CF68E1E">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-04C94A5C-BA30-49F7-9927-31FD05750062]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <intermediateCatchEvent id="sid-4850281F-CBFF-41F8-B503-0F0524986E1C">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-4850281F-CBFF-41F8-B503-0F0524986E1C]]></modeler:editor-resource-id>
+      </extensionElements>
+      <messageEventDefinition messageRef="orderCancelled"/>
+    </intermediateCatchEvent>
+    <sequenceFlow id="sid-CB599075-5051-4C70-BCB1-128634004335" sourceRef="sid-EF0C03BB-7172-42CE-923F-E496F70B4A2F" targetRef="sid-4850281F-CBFF-41F8-B503-0F0524986E1C">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-CB599075-5051-4C70-BCB1-128634004335]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-07437C0B-7580-4CC8-8A4D-96D39E7DEC25" sourceRef="sid-4850281F-CBFF-41F8-B503-0F0524986E1C" targetRef="sid-A0899DF8-0379-4566-BB6B-0ACF1B487C46">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-07437C0B-7580-4CC8-8A4D-96D39E7DEC25]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <intermediateCatchEvent id="sid-C682FBD2-AA70-4E29-A168-677FA12876E7">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-C682FBD2-AA70-4E29-A168-677FA12876E7]]></modeler:editor-resource-id>
+      </extensionElements>
+      <signalEventDefinition signalRef="orderDispatched"/>
+    </intermediateCatchEvent>
+    <sequenceFlow id="sid-7ED1054A-E9B2-44F7-9257-3B0E32D4EEDA" sourceRef="sid-788C4062-FBEB-4A06-BF40-48319CF68E1E" targetRef="sid-C682FBD2-AA70-4E29-A168-677FA12876E7">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-7ED1054A-E9B2-44F7-9257-3B0E32D4EEDA]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-9EC23DCF-7F34-485C-8A2C-14177A3A244A" sourceRef="sid-C682FBD2-AA70-4E29-A168-677FA12876E7" targetRef="sid-A43629EA-C9CF-4BF1-A79B-A5B247C7F10D">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-9EC23DCF-7F34-485C-8A2C-14177A3A244A]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <userTask id="sid-A0899DF8-0379-4566-BB6B-0ACF1B487C46" name="Cancel Order" activiti:assignee="$INITIATOR">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:editor-resource-id><![CDATA[sid-A0899DF8-0379-4566-BB6B-0ACF1B487C46]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <sequenceFlow id="sid-CF40EB1D-FCEA-45DD-BA11-E5F4BDA891F1" sourceRef="sid-A0899DF8-0379-4566-BB6B-0ACF1B487C46" targetRef="sid-A43629EA-C9CF-4BF1-A79B-A5B247C7F10D">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-CF40EB1D-FCEA-45DD-BA11-E5F4BDA891F1]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-34EB4D02-5258-46ED-8778-9CEDBDAF6205" sourceRef="sid-6C9098C3-9DAC-4114-BF53-F15D0549CDDC" targetRef="sid-EF0C03BB-7172-42CE-923F-E496F70B4A2F">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-34EB4D02-5258-46ED-8778-9CEDBDAF6205]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${orderStatus=="rejected"}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-E7B7A0B2-A5DA-410A-87EE-C3A40057B1DC" sourceRef="sid-6C9098C3-9DAC-4114-BF53-F15D0549CDDC" targetRef="sid-0E19A8FC-184B-4911-9046-DA88B0C938FD">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-E7B7A0B2-A5DA-410A-87EE-C3A40057B1DC]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${orderStatus=="accepted"}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_GenerateTestCases">
+    <bpmndi:BPMNPlane bpmnElement="GenerateTestCases" id="BPMNPlane_GenerateTestCases">
+      <bpmndi:BPMNShape bpmnElement="startEvent1" id="BPMNShape_startEvent1">
+        <omgdc:Bounds height="30.0" width="30.0" x="75.0" y="120.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-E63103FC-D347-4407-8921-612E2DDEB6F3" id="BPMNShape_sid-E63103FC-D347-4407-8921-612E2DDEB6F3">
+        <omgdc:Bounds height="80.0" width="100.0" x="180.0" y="95.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-6C9098C3-9DAC-4114-BF53-F15D0549CDDC" id="BPMNShape_sid-6C9098C3-9DAC-4114-BF53-F15D0549CDDC">
+        <omgdc:Bounds height="40.0" width="40.0" x="360.0" y="115.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-0E19A8FC-184B-4911-9046-DA88B0C938FD" id="BPMNShape_sid-0E19A8FC-184B-4911-9046-DA88B0C938FD">
+        <omgdc:Bounds height="80.0" width="100.0" x="450.0" y="30.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-EF0C03BB-7172-42CE-923F-E496F70B4A2F" id="BPMNShape_sid-EF0C03BB-7172-42CE-923F-E496F70B4A2F">
+        <omgdc:Bounds height="80.0" width="100.0" x="450.0" y="165.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-BD72D381-DED7-4AA8-B7EB-EE480901A799" id="BPMNShape_sid-BD72D381-DED7-4AA8-B7EB-EE480901A799">
+        <omgdc:Bounds height="80.0" width="100.0" x="645.0" y="31.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-B2874174-D23B-4896-B5DB-495755B97A51" id="BPMNShape_sid-B2874174-D23B-4896-B5DB-495755B97A51">
+        <omgdc:Bounds height="31.0" width="31.0" x="810.0" y="55.5"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-A43629EA-C9CF-4BF1-A79B-A5B247C7F10D" id="BPMNShape_sid-A43629EA-C9CF-4BF1-A79B-A5B247C7F10D">
+        <omgdc:Bounds height="28.0" width="28.0" x="1080.0" y="150.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-788C4062-FBEB-4A06-BF40-48319CF68E1E" id="BPMNShape_sid-788C4062-FBEB-4A06-BF40-48319CF68E1E">
+        <omgdc:Bounds height="80.0" width="100.0" x="886.0" y="31.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-4850281F-CBFF-41F8-B503-0F0524986E1C" id="BPMNShape_sid-4850281F-CBFF-41F8-B503-0F0524986E1C">
+        <omgdc:Bounds height="30.0" width="30.0" x="679.5" y="190.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-C682FBD2-AA70-4E29-A168-677FA12876E7" id="BPMNShape_sid-C682FBD2-AA70-4E29-A168-677FA12876E7">
+        <omgdc:Bounds height="30.0" width="30.0" x="1050.0" y="56.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-A0899DF8-0379-4566-BB6B-0ACF1B487C46" id="BPMNShape_sid-A0899DF8-0379-4566-BB6B-0ACF1B487C46">
+        <omgdc:Bounds height="80.0" width="100.0" x="885.0" y="165.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-E6C86FD2-F774-46D4-90D0-E2234ED0D3DD" id="BPMNEdge_sid-E6C86FD2-F774-46D4-90D0-E2234ED0D3DD">
+        <omgdi:waypoint x="280.0" y="135.0"/>
+        <omgdi:waypoint x="360.0" y="135.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-63C868FF-B9EA-45A0-9DA0-BB4C23F280F8" id="BPMNEdge_sid-63C868FF-B9EA-45A0-9DA0-BB4C23F280F8">
+        <omgdi:waypoint x="550.0" y="70.0"/>
+        <omgdi:waypoint x="597.5" y="70.0"/>
+        <omgdi:waypoint x="597.5" y="71.0"/>
+        <omgdi:waypoint x="645.0" y="71.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-515F5846-A652-4BC3-A4A2-1E27FA7E089A" id="BPMNEdge_sid-515F5846-A652-4BC3-A4A2-1E27FA7E089A">
+        <omgdi:waypoint x="745.0" y="71.0"/>
+        <omgdi:waypoint x="810.0" y="71.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-9EC23DCF-7F34-485C-8A2C-14177A3A244A" id="BPMNEdge_sid-9EC23DCF-7F34-485C-8A2C-14177A3A244A">
+        <omgdi:waypoint x="1069.465356638071" y="85.31993680484787"/>
+        <omgdi:waypoint x="1089.8323338044672" y="150.63472564880865"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-1B4DD78F-7566-4BA1-AB4E-55AC2279889A" id="BPMNEdge_sid-1B4DD78F-7566-4BA1-AB4E-55AC2279889A">
+        <omgdi:waypoint x="105.0" y="135.0"/>
+        <omgdi:waypoint x="180.0" y="135.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-07437C0B-7580-4CC8-8A4D-96D39E7DEC25" id="BPMNEdge_sid-07437C0B-7580-4CC8-8A4D-96D39E7DEC25">
+        <omgdi:waypoint x="709.5" y="205.0"/>
+        <omgdi:waypoint x="885.0" y="205.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-04C94A5C-BA30-49F7-9927-31FD05750062" id="BPMNEdge_sid-04C94A5C-BA30-49F7-9927-31FD05750062">
+        <omgdi:waypoint x="841.9998347133051" y="71.42727347857588"/>
+        <omgdi:waypoint x="886.0" y="71.22727272727272"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-7ED1054A-E9B2-44F7-9257-3B0E32D4EEDA" id="BPMNEdge_sid-7ED1054A-E9B2-44F7-9257-3B0E32D4EEDA">
+        <omgdi:waypoint x="986.0" y="71.0"/>
+        <omgdi:waypoint x="1050.0" y="71.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-E7B7A0B2-A5DA-410A-87EE-C3A40057B1DC" id="BPMNEdge_sid-E7B7A0B2-A5DA-410A-87EE-C3A40057B1DC">
+        <omgdi:waypoint x="393.4189189189189" y="128.4189189189189"/>
+        <omgdi:waypoint x="450.0" y="97.40585774058577"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-CB599075-5051-4C70-BCB1-128634004335" id="BPMNEdge_sid-CB599075-5051-4C70-BCB1-128634004335">
+        <omgdi:waypoint x="550.0" y="205.0"/>
+        <omgdi:waypoint x="679.5" y="205.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-CF40EB1D-FCEA-45DD-BA11-E5F4BDA891F1" id="BPMNEdge_sid-CF40EB1D-FCEA-45DD-BA11-E5F4BDA891F1">
+        <omgdi:waypoint x="985.0" y="192.1069182389937"/>
+        <omgdi:waypoint x="1080.4434522592264" y="167.4957135683756"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-34EB4D02-5258-46ED-8778-9CEDBDAF6205" id="BPMNEdge_sid-34EB4D02-5258-46ED-8778-9CEDBDAF6205">
+        <omgdi:waypoint x="392.5132275132275" y="142.48677248677248"/>
+        <omgdi:waypoint x="450.0" y="175.9205020920502"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
